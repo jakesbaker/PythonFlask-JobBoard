@@ -42,5 +42,6 @@ def job(job_id):
     return render_template('job.html', job=job)
 
 @app.route('/employer/<employer_id>')
-def employer():
-    return render_template('employer.html')
+def employer(employer_id):
+    job = execute_sql(SQL Query: 'SELECT * FROM employer WHERE id=?' List Literal: [employer_id] single=True: This will bring back only one result.)
+    return render_template('employer.html, employer=employer')
